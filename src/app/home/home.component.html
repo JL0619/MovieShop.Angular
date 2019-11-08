@@ -1,0 +1,68 @@
+<div>
+    <ngb-carousel *ngIf="movies">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="movies[0].backdropUrl" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{movies[0].title}}</h3>
+                <p>{{movies[0].tagline}}</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="movies[1].backdropUrl" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{movies[1].title}}</h3>
+                <p>{{movies[1].tagline}}</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="movies[2].backdropUrl" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{movies[2].title}}</h3>
+                <p>{{movies[2].tagline}}</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="movies[3].backdropUrl" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{movies[3].title}}</h3>
+                <p>{{movies[3].tagline}}</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="movies[4].backdropUrl" alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>{{movies[4].title}}</h3>
+                    <p>{{movies[4].tagline}}</p>
+                </div>
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="movies[2].backdropUrl" alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>{{movies[2].title}}</h3>
+                    <p>{{movies[2].tagline}}</p>
+                </div>
+         </ng-template>
+    </ngb-carousel>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-lg-3" *ngFor="let movie of movies">
+            <app-movie-card [movie]='movie' (buyMovieEvent)="buyMovie($event)">
+
+            </app-movie-card>
+        </div>
+
+    </div>
+</div>

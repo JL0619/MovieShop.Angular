@@ -1,0 +1,11 @@
+<p>To do:get list movies by genres</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-lg-3" *ngFor="let movie of movies">
+            <app-movie-card [movie]='movie'  (buyMovieEvent)="buyMovie($event)" >
+
+            </app-movie-card>
+        </div>
+
+    </div>
+</div>

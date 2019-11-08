@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+/*bootstrap will start the project*/
+/*every angular application need have at least one module*/
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
